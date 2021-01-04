@@ -1,0 +1,15 @@
+<p-button [routerLink]="['/new-workout']" label="New Workout" icon="pi pi-plus"></p-button>
+<br>
+<br>
+<br>
+<div *ngFor="let workout of workouts">
+  <p-card [header]="workout.name + ' ' + workout.date">
+    <div *ngFor="let item of workout | keyvalue; let last = last">
+      <div *ngIf="!['name', 'date', 'ID'].includes(item.key)">
+        {{item.key}}: {{item.value}}
+        <p-divider *ngIf="!last"></p-divider>
+      </div>
+    </div>
+  </p-card>
+  <br>
+</div>

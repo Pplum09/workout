@@ -1,0 +1,28 @@
+<h2>New Workout</h2>
+<form [formGroup]="workoutForm">
+  <div class="p-field p-col-12 p-md-4">
+    <p-calendar inputId="basic" formControlName="date" [touchUI]="true" [readonlyInput]="true"></p-calendar>
+  </div>
+  <br>
+  <span class="p-float-label">
+    <input formControlName="name" type="text" pInputText>
+    <label>Name</label>
+  </span>
+  <br>
+  <span class="p-float-label">
+    <input formControlName="weight" type="number" pInputText>
+    <label>Weight</label>
+  </span>
+  <br>
+  <span class="p-float-label">
+    <input formControlName="sets" type="number" pInputText>
+    <label>Sets</label>
+  </span>
+  <br>
+  <span class="p-float-label">
+    <input formControlName="repetition" type="number" pInputText>
+    <label>Repetitions</label>
+  </span>
+  <br>
+  <p-button (click)="save()" label="Save"></p-button>
+</form>
