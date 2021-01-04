@@ -36,6 +36,6 @@ export class NewWorkoutComponent implements OnInit {
     }
     lib.insert('workouts', data);
     lib.commit();
-    this.router.navigate(['/home'])
+    this.router.navigate([''])
   }
 }

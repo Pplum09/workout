@@ -4,7 +4,7 @@ import {HomeComponent} from './components/home/home.component';
 import {NewWorkoutComponent} from './components/new-workout/new-workout.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', component: HomeComponent},
   { path: 'home', component: HomeComponent},
   { path: 'new-workout', component: NewWorkoutComponent},
 ];
