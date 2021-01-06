@@ -34,7 +34,8 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "node_modules/localstoragedb/localstoragedb.min.js"
+              "node_modules/localstoragedb/localstoragedb.min.js",
+              "node_modules/chart.js/dist/Chart.js"
             ]
           },
           "configurations": {

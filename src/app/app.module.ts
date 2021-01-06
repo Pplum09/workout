@@ -14,13 +14,19 @@ import {RippleModule} from 'primeng/ripple';
 import {CardModule} from 'primeng/card';
 import {InputNumberModule} from 'primeng/inputnumber';
 import {DividerModule} from 'primeng/divider';
+import {SidebarModule} from 'primeng/sidebar';
+import {TabMenuModule} from 'primeng/tabmenu';
+import { StatisticsComponent } from './components/statistics/statistics.component';
+import {ChartModule} from 'primeng/chart';
+import {ToastModule} from 'primeng/toast';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NewWorkoutComponent,
-    HomeComponent
+    HomeComponent,
+    StatisticsComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +41,10 @@ import {DividerModule} from 'primeng/divider';
     InputNumberModule,
     DividerModule,
     ReactiveFormsModule,
+    SidebarModule,
+    TabMenuModule,
+    ChartModule,
+    ToastModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

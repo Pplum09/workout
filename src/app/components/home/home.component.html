@@ -1,9 +1,9 @@
-<p-button [routerLink]="['/new-workout']" label="New Workout" icon="pi pi-plus"></p-button>
-<br>
-<br>
-<br>
 <div *ngFor="let workout of workouts">
-  <p-card [header]="workout.name + ' ' + workout.date">
+  <p-card>
+    <div>
+      <b>{{workout.name}} {{workout.date}}</b>
+      <button (click)="openEditMenu(workout)" pButton pRipple type="button" icon="pi pi-ellipsis-h" class="p-button-rounded p-button-text"></button>
+    </div>
     <div *ngFor="let item of workout | keyvalue; let last = last">
       <div *ngIf="!['name', 'date', 'ID'].includes(item.key)">
         {{item.key}}: {{item.value}}
@@ -13,3 +13,6 @@
   </p-card>
   <br>
 </div>
+<p-sidebar [(visible)]="visibleSidebar4" [showCloseIcon]="false" position="bottom" [baseZIndex]="10000">
+    <button (click)="deleteWorkout()" icon="pi pi-trash" pButton pRipple type="button" label="Delete" class="p-button-danger p-button-text"></button>
+</p-sidebar>
